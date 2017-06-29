@@ -37,6 +37,8 @@ if [[ $REBUILD_NPM_MODULES ]]; then
   fi
 fi
 
+/usr/bin/Xvfb -ac -screen scrn 1280x900x24 :9.0 &
+
 # Set a delay to wait to start meteor container
 if [[ $DELAY ]]; then
   echo "Delaying startup for $DELAY seconds"
